@@ -22,8 +22,8 @@
             "src/migrations"
         ],
         "psr-0": {
-            "Tappleby\\AuthToken": "src/",
-            "Tappleby\\Support": "src/"
+            "Arh\\AuthToken": "src/",
+            "Arh\\Support": "src/"
         }
     },
     "minimum-stability": "dev"
