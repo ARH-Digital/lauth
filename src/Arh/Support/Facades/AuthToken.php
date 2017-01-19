@@ -9,7 +9,7 @@ namespace Arh\Support\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class AuthToken extends Facade {
+class AppAuthToken extends Facade {
 
   protected static function getFacadeAccessor() { return 'arh.auth.token'; }
 }
