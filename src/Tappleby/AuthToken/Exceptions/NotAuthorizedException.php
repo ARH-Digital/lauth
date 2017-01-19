@@ -1,11 +1,11 @@
 <?php
 /*
- * User: tappleby
+ * tappleby
  * Date: 2013-05-12
  * Time: 12:17 AM
  */
 
-namespace Tappleby\AuthToken\Exceptions;
+namespace Arh\AuthToken\Exceptions;
 
 
 class NotAuthorizedException extends \Exception {

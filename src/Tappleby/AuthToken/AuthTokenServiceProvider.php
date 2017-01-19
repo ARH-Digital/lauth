@@ -1,4 +1,4 @@
-<?php namespace Tappleby\AuthToken;
+<?php namespace Arh\AuthToken;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -14,8 +14,8 @@ class AuthTokenServiceProvider extends ServiceProvider
 
 	public function boot()
 	{
-		$this->package('tappleby/laravel-auth-token');
-		$this->app['router']->filter('auth.token', 'tappleby.auth.token.filter');
+		$this->package('arh/laravel-auth-token');
+		$this->app['router']->filter('auth.token', 'arh.auth.token.filter');
 	}
 
 
@@ -28,19 +28,19 @@ class AuthTokenServiceProvider extends ServiceProvider
 	{
 		$app = $this->app;
 
-		$app->bindShared('tappleby.auth.token', function ($app) {
+		$app->bindShared('arh.auth.token', function ($app) {
 			return new AuthTokenManager($app);
 		});
 
-		$app->bindShared('tappleby.auth.token.filter', function ($app) {
-			$driver = $app['tappleby.auth.token']->driver();
+		$app->bindShared('arh.auth.token.filter', function ($app) {
+			$driver = $app['arh.auth.token']->driver();
       $events = $app['events'];
 
       return new AuthTokenFilter($driver, $events);
 		});
 
-		$app->bind('Tappleby\AuthToken\AuthTokenController', function ($app) {
-			$driver = $app['tappleby.auth.token']->driver();
+		$app->bind('Arh\AuthToken\AuthTokenController', function ($app) {
+			$driver = $app['arh.auth.token']->driver();
 			$credsFormatter = $app['config']->get('laravel-auth-token::format_credentials', null);
 			$events = $app['events'];
 
@@ -55,7 +55,7 @@ class AuthTokenServiceProvider extends ServiceProvider
 	 */
 	public function provides()
 	{
-		return array('tappleby.auth.token', 'tappleby.auth.token.filter');
+		return array('arh.auth.token', 'arh.auth.token.filter');
 	}
 
 }

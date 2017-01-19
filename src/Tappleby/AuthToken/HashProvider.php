@@ -1,11 +1,11 @@
 <?php
 /*
- * User: tappleby
+ * tappleby
  * Date: 2013-05-11
  * Time: 7:34 PM
  */
 
-namespace Tappleby\AuthToken;
+namespace Arh\AuthToken;
 
 
 class HashProvider {

@@ -1,15 +1,15 @@
 <?php
 /*
- * User: tappleby
+ * tappleby
  * Date: 2013-05-11
  * Time: 10:11 PM
  */
 
-namespace Tappleby\AuthToken;
+namespace Arh\AuthToken;
 
 
 use Illuminate\Events\Dispatcher;
-use Tappleby\AuthToken\Exceptions\NotAuthorizedException;
+use Arh\AuthToken\Exceptions\NotAuthorizedException;
 
 class AuthTokenFilter {
 
@@ -21,7 +21,7 @@ class AuthTokenFilter {
   protected $events;
 
   /**
-   * @var \Tappleby\AuthToken\AuthTokenDriver
+   * @var \Arh\AuthToken\AuthTokenDriver
    */
   protected $driver;
 

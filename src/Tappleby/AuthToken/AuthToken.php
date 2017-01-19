@@ -1,11 +1,11 @@
 <?php
 /*
- * User: tappleby
+ * tappleby
  * Date: 2013-05-11
  * Time: 3:44 PM
  */
 
-namespace Tappleby\AuthToken;
+namespace Arh\AuthToken;
 
 
 use Illuminate\Support\Contracts\ArrayableInterface;

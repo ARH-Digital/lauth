@@ -1,6 +1,6 @@
 <?php
 /*
- * User: tappleby
+ * tappleby
  * Date: 2013-05-11
  * Time: 6:17 PM
  */
@@ -17,7 +17,7 @@ class DatabaseAuthTokenProviderTest extends PHPUnit_Framework_TestCase {
   /**
    * @param null|\Illuminate\Encryption\Encrypter $enc
    * @param array $encPayload
-   * @return \Tappleby\AuthToken\DatabaseAuthTokenProvider
+   * @return \Arh\AuthToken\DatabaseAuthTokenProvider
    */
   private function getProvider( $enc = null,  $encPayload = array('id' => 1, 'key' => 'public') ) {
     $conn = m::mock('Illuminate\Database\Connection');
@@ -26,7 +26,7 @@ class DatabaseAuthTokenProviderTest extends PHPUnit_Framework_TestCase {
       m::mock('Illuminate\Encryption\Encrypter');
     }
 
-    $provider = new Tappleby\AuthToken\DatabaseAuthTokenProvider($conn, 'table', $enc, m::mock('\Tappleby\AuthToken\HashProvider'));
+    $provider = new Arh\AuthToken\DatabaseAuthTokenProvider($conn, 'table', $enc, m::mock('\Arh\AuthToken\HashProvider'));
 
     return $provider;
   }
@@ -60,7 +60,7 @@ class DatabaseAuthTokenProviderTest extends PHPUnit_Framework_TestCase {
 
 
     $token = $provider->create($user);
-    $this->assertInstanceOf('\Tappleby\AuthToken\AuthToken', $token);
+    $this->assertInstanceOf('\Arh\AuthToken\AuthToken', $token);
     $this->assertEquals('foo', $token->getAuthIdentifier());
     $this->assertEquals('public', $token->getPublicKey() );
     $this->assertEquals('private', $token->getPrivateKey() );
@@ -151,7 +151,7 @@ class DatabaseAuthTokenProviderTest extends PHPUnit_Framework_TestCase {
     $token = $provider->find('payload');
 
     $this->assertNotNull($token);
-    $this->assertInstanceOf('\Tappleby\AuthToken\AuthToken', $token);
+    $this->assertInstanceOf('\Arh\AuthToken\AuthToken', $token);
     $this->assertEquals( $mockData->authId, $token->getAuthIdentifier() );
     $this->assertEquals( $mockData->public, $token->getPublicKey() );
     $this->assertEquals( $mockData->private, $token->getPrivateKey() );

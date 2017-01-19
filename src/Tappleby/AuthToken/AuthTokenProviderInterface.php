@@ -1,20 +1,20 @@
 <?php
 /**
  * Created by IntelliJ IDEA.
- * User: tappleby
+ * tappleby
  * Date: 2013-05-11
  * Time: 2:53 PM
  * To change this template use File | Settings | File Templates.
  */
 
-namespace Tappleby\AuthToken;
+namespace Arh\AuthToken;
 
 
 use Illuminate\Auth\UserInterface;
 
 /**
  * Class AuthTokenProviderInterface
- * @package Tappleby\AuthToken
+ * @package Arh\AuthToken
  */
 interface AuthTokenProviderInterface {
 

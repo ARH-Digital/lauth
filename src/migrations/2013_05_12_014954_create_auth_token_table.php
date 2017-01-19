@@ -11,7 +11,7 @@ class CreateAuthTokenTable extends Migration {
 	 */
 	public function up()
 	{
-    Schema::create('ta_auth_tokens', function($table)
+    Schema::create('arh_auth_tokens', function($table)
     {
       $table->integer('auth_identifier');
       $table->string('public_key', 96);
@@ -28,7 +28,7 @@ class CreateAuthTokenTable extends Migration {
 	 */
 	public function down()
 	{
-    Schema::drop('ta_auth_tokens');
+    Schema::drop('arh_auth_tokens');
 	}
 
 }

@@ -1,11 +1,11 @@
 <?php
 /*
- * User: tappleby
+ * tappleby
  * Date: 2013-05-11
  * Time: 4:01 PM
  */
 
-namespace Tappleby\AuthToken;
+namespace Arh\AuthToken;
 
 
 use Illuminate\Encryption\DecryptException;
@@ -19,12 +19,12 @@ abstract class AbstractAuthTokenProvider implements AuthTokenProviderInterface {
   protected $encrypter;
 
   /**
-   * @var \Tappleby\AuthToken\HashProvider
+   * @var \Arh\AuthToken\HashProvider
    */
   protected $hasher;
 
   /**
-   * @return \Tappleby\AuthToken\HashProvider
+   * @return \Arh\AuthToken\HashProvider
    */
   public function getHasher()
   {

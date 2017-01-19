@@ -1,11 +1,11 @@
 <?php
 /*
- * User: tappleby
+ * tappleby
  * Date: 2013-05-11
  * Time: 4:07 PM
  */
 
-namespace Tappleby\AuthToken;
+namespace Arh\AuthToken;
 
 use \Illuminate\Auth\UserInterface;
 use \Illuminate\Database\Connection;
@@ -24,7 +24,7 @@ class DatabaseAuthTokenProvider extends AbstractAuthTokenProvider {
    * @param Connection $conn
    * @param string $table
    * @param \Illuminate\Encryption\Encrypter $encrypter
-   * @param \Tappleby\AuthToken\HashProvider $hasher
+   * @param \Arh\AuthToken\HashProvider $hasher
    */
   function __construct(Connection $conn, $table, Encrypter $encrypter, HashProvider $hasher)
   {

@@ -1,11 +1,11 @@
 <?php
 /*
- * User: tappleby
+ * tappleby
  * Date: 2013-05-11
  * Time: 9:14 PM
  */
 
-namespace Tappleby\AuthToken;
+namespace Arh\AuthToken;
 
 
 use Illuminate\Support\Manager;
@@ -14,7 +14,7 @@ class AuthTokenManager extends Manager {
 
   protected function createDatabaseDriver() {
     $provider = $this->createDatabaseProvider();
-    $users = $this->app['auth']->driver()->getProvider();
+    $users = $this->app['auth']->user()->driver()->getProvider();
 
     return new AuthTokenDriver($provider, $users);
   }
@@ -24,7 +24,7 @@ class AuthTokenManager extends Manager {
     $encrypter = $this->app['encrypter'];
     $hasher = new HashProvider($this->app['config']['app.key']);
 
-    return new DatabaseAuthTokenProvider($connection, 'ta_auth_tokens', $encrypter, $hasher);
+    return new DatabaseAuthTokenProvider($connection, 'arh_auth_tokens', $encrypter, $hasher);
   }
 
   public function getDefaultDriver() {

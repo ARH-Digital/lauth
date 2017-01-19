@@ -1,19 +1,19 @@
 <?php
 /*
- * User: tappleby
+ * tappleby
  * Date: 2013-05-11
  * Time: 9:23 PM
  */
 
-namespace Tappleby\AuthToken;
+namespace Arh\AuthToken;
 
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\UserProviderInterface;
-use Tappleby\AuthToken\Exceptions\NotAuthorizedException;
+use Arh\AuthToken\Exceptions\NotAuthorizedException;
 
 class AuthTokenDriver {
   /**
-   * @var \Tappleby\AuthToken\AuthTokenProviderInterface
+   * @var \Arh\AuthToken\AuthTokenProviderInterface
    */
   protected $tokens;
 
@@ -31,7 +31,7 @@ class AuthTokenDriver {
   /**
    * Returns the AuthTokenInterface provider.
    *
-   * @return \Tappleby\AuthToken\AuthTokenProviderInterface
+   * @return \Arh\AuthToken\AuthTokenProviderInterface
    */
   public function getProvider()
   {

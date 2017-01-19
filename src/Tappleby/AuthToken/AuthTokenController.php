@@ -1,15 +1,15 @@
 <?php
 /*
- * User: tappleby
+ * tappleby
  * Date: 2013-05-11
  * Time: 11:26 PM
  */
 
-namespace Tappleby\AuthToken;
+namespace Arh\AuthToken;
 
 use Illuminate\Events\Dispatcher;
 use Illuminate\Routing\Controller;
-use Tappleby\AuthToken\Exceptions\NotAuthorizedException;
+use Arh\AuthToken\Exceptions\NotAuthorizedException;
 use Response;
 use Request;
 use Input;
@@ -18,7 +18,7 @@ use Validator;
 class AuthTokenController extends Controller {
 
   /**
-   * @var \Tappleby\AuthToken\AuthTokenDriver
+   * @var \Arh\AuthToken\AuthTokenDriver
    */
   protected $driver;
 
